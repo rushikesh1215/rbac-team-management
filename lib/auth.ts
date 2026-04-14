@@ -12,7 +12,7 @@ export const hashPassword= async (password:string):Promise<string> =>{
 export const verifyhPassword= async (password:string,hashPassword:string):Promise<boolean> =>{
     return bcrypt.compare(password,hashPassword);
 }
-export const generateToken=  (userId:String):String=>{
+export const generateToken=  (userId:string):string=>{
     return jwt.sign({userId},secret,{
         expiresIn:"7d"
     });
