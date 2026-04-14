@@ -10,8 +10,8 @@ export interface User {
   name: string;
   email: string;
   role: Role;
-  teamId?: string;
-  team?: Team;
+  teamId: string | null;
+  team: Team | null;
   createdAt: Date;
   updatedAt: Date;
 }
